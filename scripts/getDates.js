@@ -1,13 +1,37 @@
-// getDates.js
-document.addEventListener("DOMContentLoaded", function() {
-    const yearElement = document.getElementById("year");
-    const lastModifiedElement = document.getElementById("lastModified");
+// Hamburger Menu Toggle
+document.getElementById('menu').addEventListener('click', function() {
+    const nav = document.querySelector('.navigation');
+    const isHidden = nav.getAttribute('aria-hidden') === 'true';
+    nav.setAttribute('aria-hidden', !isHidden);
+});
 
-    // Get the current year
-    const currentYear = new Date().getFullYear();
-    yearElement.textContent = currentYear;
+// Dark Mode Toggle
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    // Save user preference in localStorage
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('dark-mode', isDarkMode);
+});
 
-    // Get the last modified date
-    const lastModifiedDate = new Date(document.lastModified);
-    lastModifiedElement.textContent = lastModifiedDate.toLocaleDateString();
+// Apply Dark Mode Preference on Page Load
+window.addEventListener('load', function() {
+    const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+    }
+});
+
+// Dynamic Date Display
+document.addEventListener('DOMContentLoaded', function() {
+    // Display current year
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    // Display last modified date
+    const lastModifiedElement = document.getElementById('lastModified');
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = document.lastModified;
+    }
 });
