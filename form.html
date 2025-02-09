@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
-    <meta name="description" content="A web form to sign up for selected tournaments.">
-    <meta name="author" content="Sullayman Junior Samai">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <title> Sullayman Samai - WDD 230 - Form</title>
+    <meta name="description" content="Form page">
+    <meta name="author" content="Sullayman Samai">
+    <meta property="og:title" content="Sullayman Samai - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sullayman1.github.io/wdd230/">
+    <meta property="og:image"
+        content="https://www.travelandleisure.com/thmb/Xw-LpgtezL-SpZHoNVEdKtN-ejM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lima-peru-LIMATG0721-88067978d649415d9b31fbafef46dbd8.jpg">
+    <meta property="og:description" content="Form page">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
-    <script src="scripts/menu.js" defer></script>
-    <script src="scripts/tournaments.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <h1>Sign Up form</h1>
-        <button id="menu"></button>
-        <nav>
-            <a href="index.html">Home</a>
-        </nav>
+        <img src="images/dark.svg" alt="dark mode" id="darkBtn" loading="lazy">
+    <img src="images/Samai.jpg" id="profilePhoto" alt="Harold Carazas Profile" width="100" height="123"
+      loading="lazy">
+    <span>Sullayman Samai</span>
     </header>
+    <nav>
+        <button id="menu"></button>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="">Site Plan</a></li>
+            <li><a href="form.html" class="active">Form</a></li>
+        </ul>
+    </nav>
     <main>
-        <h2>Sign Up</h2>
-        <form  method="get" action="thanks.html" class="wf">
-            <fieldset>
-                <legend>Player Information</legend>
-                <label>First Name* <input type="text" name="fname" required></label>
-                <label>Last Name* <input type="text" name="lname" required></label>
-                <label>Phone <input type="tel" name="fname" placeholder="1235551234"></label>
-                <label>Email* <input type="email" name="email" required placeholder="someone@mail.com"></label>
-                <!-- <div>Software Needed</div> -->
-                <label><input type="checkbox" name="adult" value="yes">Over 18 years old</label>
-            </fieldset>
-            <fieldset>
-                <legend>Tournament information</legend>
-                <label>Tournament/Match Day
-                    <select name="tournament" id="tournament" required>
-                        <option value="" disabled selected="selected">Select an Event... &#9662;</option>
-                    </select>
-                </label>
-                <label>Team Code* <input type="text" name="team" required placeholder="ex-1234"></label>
-            </fieldset>
-            <input type="submit" value="Sign Up">
+        <form method="get" action="record.html" id="homeForm">
+            <label>Username* <input type="text" name="username" id="username" required></label>
+            <label>Password* <input type="password" id="pass1" name="pass1" required pattern="[a-zA-Z0-9]{8,}"
+                    title="Password must be at least eight (8) characters long"><span
+                    id="passwordMessage"></span></label>
+            <label>Repeat the password* <input type="password" id="pass2" name="pass2" required
+                    title="Password must be at least eight (8) characters long" pattern="[a-zA-Z0-9]{8,}"></label>
+
+            <label>Email* <input type="email" name="email" id="email" required pattern="[a-zA-Z0-9._%+\-]+@byui\.edu"
+                    title="Please enter a valid email address"></label>
+            <span id="ratingValue">1</span>
+            <label>Page Rating <input type="range" name="pageRating" id="pageRating" min="1" max="10" step="1"
+                    value="1"></label>
+            <input type="submit" value="Login">
         </form>
-        <p>If you don't have a team type "nt" on the Team Code and we will notify you if there is a team available.</p>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> Sign Up Form Sullayman  Samai</p>
-        <p>Sullayman Samai</p>
+        <p>
+            <span id="year">&copy;</span>
+            <span>Sullayman Samai</span>
+            <span>Sierra Leone</span>
+        </p>
+        <p id="lastModified"></p>
     </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/formvalidation.js"></script>
 </body>
+
 </html>

@@ -1,73 +1,85 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Sullayman Samai">
-    <meta name="description" content="This is Sullayman Samai home page for WDD 230 - Web Frontend Development. It will serve as a course assignment portal. This page will update each week with links to the activities and revisions as assigned.">
-    <meta property="og:title" content="Sullayman WDD 230 Home Page">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/home.webp">
-    <meta property="og:url" content="https://sullayman1.github.io/wdd230/">
-    <title>Sullayman Samai - WDD 230 - Web Frontend Development</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sullayman Samai - WDD 230 - Web Frontend Development</title>
+  <meta name="description"
+    content="Welcome to the WDD 230 - Web Frontend Development course assignment portal by Sullayman Samai, where you can access all the essential assignments and resources for mastering frontend development.">
+  <meta name="author" content="Sullayman Samai">
+  <meta property="og:title" content="Sullayman Samai - WDD 230 - Web Frontend Development">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sullayman1.github.io/wdd230/">
+  <meta property="og:image"
+    content="https://www.travelandleisure.com/thmb/Xw-LpgtezL-SpZHoNVEdKtN-ejM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lima-peru-LIMATG0721-88067978d649415d9b31fbafef46dbd8.jpg">
+  <meta property="og:description"
+    content="Welcome to the WDD 230 - Web Frontend Development course assignment portal by Sullayman Samai, where you can access all the essential assignments and resources for mastering frontend development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <img src="images/Samai.jpg" alt="Image of Sullayman Samai" width="100">
-        <span>Sullayman Samai</span>
-        <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-    </header>
-    <button id="menu" aria-label="Toggle navigation">☰</button>
-    <nav class="navigation">
-        <a href="../index.html">|Home|</a>
-        <a href="lesson03/chamber-site-plan.html">Site Plan</a>
-        <a href="chamber/">Chamber</a>
-        <a href="form.html">Form</a>
-    </nav>
-    <main>
-        <h1>Sullayman Samai - WDD 230</h1>
-        <div class="center-image">
-            <img src="images/aba-nigeria-temple-lds-273999-wallpaper.jpg" alt="Image of a Temple" width="650">
-        </div>
-        <h2>WDD 230: Web Frontend Development</h2>
-        <section class="card" id="learn">
-            <h2>Learning Activities</h2>
-            <ul id="activities">
-                <li>01: <a href="lesson02/design.html">Web Design|Principles</a></li>
-                <li>02: <a href="lesson02/design.html">Web Design |Principles</a></li>
-                <li>03: <a href="lesson02/design.html">Web Design |Principles</a></li>
-                <li>04: <a href="#">#</a></li>
-                <li>05: <a href="#">#</a></li>
-                <li>06: <a href="#">#</a></li>
-            </ul>
-        </section>
-        <section class="card" id="weather">
-            <h2>Information</h2>
-            <ul id="info">
-                <li>Sierra, Leone</li>
-                <li>[Weather forecast]</li>
-                <li>Visit Count 15<span class="visits"></span></li>
-            </ul>
-        </section>
-    </main>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6373745.256979246!2d-14.53656161801186!3d8.460555740077932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0324c6a35d921b%3A0x9c8b9a9b019b23f2!2sSierra%20Leone!5e0!3m2!1sen!2ssl!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <footer>
-        <div>
-            <p>&copy; <span id="year"></span></p>
-            <p>&#127804;Sullayman Samai&#127804;</p>
-            <p id="flag">Sierra Leone<img src="images/Flag_of_Sierra_Leone.svg.png" alt="Sierra Leone flag" width="40"></p>
-        </div>
-        <p id="mod">Last modification: <span id="lastModified"></span></p>
-    </footer>
-    <script src="scripts/getDates.js"></script>
+  <header>
+    <img src="images/dark.svg" alt="dark mode" id="darkBtn" loading="lazy">
+    <img src="images/Samai.jpg" id="profilePhoto" alt="Sullayman Samai Profile" width="100" height="123"
+      loading="lazy">
+    <span>Sullayman Samai</span>
+  </header>
+  <nav>
+    <button id="menu"></button>
+    <ul class="navigation">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+      <li><a href="form.html">Form</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="hero">
+      <picture>
+        <source media="(max-width: 400px)" srcset="images/hero-small.webp">
+        <source media="(max-width: 1000px)" srcset="images/hero-medium.webp">
+        <img src="images/aba-nigeria-temple-lds-273999-wallpaper.jpg" alt="Picture of the Nigeria Aba Temple" width="1500" height="750" loading="lazy">
+      </picture>
+      <div class="herolabel">
+        <p>Nigeria Aba Temple</p>
+      </div>
+    </div>
+    <h1>WDD 230: Web Frontend Development</h1>
+    <section class="card">
+      <h2>Learning Activities</h2>
+      <ul id="linksList">
+      </ul>
+    </section>
+    <section class="card" id="information">
+      <h2>Information</h2>
+      <p id="current-city"></p>
+      <div>
+        <img id="weather-icon" src="https://picsum.photos/50" alt="Weather icon" height="50" width="50">
+        <p><span id="current-temp"></span></p>
+      </div>
+      <p>Page Visits: <span class="visits"></span></p>
+    </section>
+  </main>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63071.8892325656!2d-12.090798713179655!3d8.880234581318405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf06a9be0db29e9d%3A0x9a77aab743de9a41!2sMakeni!5e0!3m2!1sen!2ssl!4v1739061936771!5m2!1sen!2ssl" width="2000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <footer>
+    <p>
+      <span id="year">&copy;</span>
+      <span>Sullayman Samai</span>
+      <span>Sierra Leone</span>
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/links.js"></script>
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/getDates.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
